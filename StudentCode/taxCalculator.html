@@ -8,7 +8,7 @@
       Filename: taxCalculator.html
 
       Author: Carly Miller
-      Date: 2/27/16
+      Date: 3/2/16
    -->
    <meta charset="utf-8" />
    <meta id="viewport" content="width=device-width, initial-scale=1.0">
@@ -173,8 +173,7 @@
                   * 
                   *                       INSERT YOUR CODE BELOW!
                  *******************************************************************************/
-             
-          if (status == 1) { 
+
              // Compute tax for married jointly filers
                if (income <= 18450){
                  tax = income * 0.10;
@@ -213,7 +212,8 @@
                }//end of else
           }//end of married file jointly calculation
           
-          else if(status == 2) {
+          else if(status == 2) {     
+
                  /*******************************************************************************
                   * Task 2:  Compute the tax for users' who file as "Married Separately".  Also,
                   *          set (or initialize) the tax rate for each bracket. Refer 
@@ -225,9 +225,7 @@
                   * 
                   *                       INSERT YOUR CODE BELOW!
                  *******************************************************************************/
-             
-             
-           if (status == 2) { 
+
              // Compute tax for married seperately filers
                if (income <= 9225){
                  tax = income * 0.10;
@@ -266,7 +264,8 @@
                }//end of else   
           }//end of married file separately calculation
           
-          else if(status == 3) {
+          else if(status == 3) {   
+
                  /*******************************************************************************
                   * Task 3:  Compute the tax for users' who file as "Head of Household".  Also,
                   *          set (or initialize) the tax rate for each bracket. Refer 
@@ -278,9 +277,7 @@
                   * 
                   *                       INSERT YOUR CODE BELOW!
                  *******************************************************************************/
-             
-             
-           if (status == 3) { 
+
              // Compute tax for head of household filers
                if (income <= 13150){
                  tax = income * 0.10;
@@ -317,8 +314,8 @@
                         (411500 - 209850) * 0.33 + (439000 - 411500) * 0.35 + (income - 439000) * .396;
                   taxRate = 39.6;
                }//end of else   
-          }//end of head of household calculation
-          
+          }//end of head of household calculation   
+
           
           /***************************************************************************************
            * Explanation of Code:
@@ -367,16 +364,12 @@
               
               //This code resets the dropdown box to the "Single" filer status.
               document.getElementById("filingStatus").selectedIndex = 0;
-              
-              //This code resets the dropdown box to the "Married Jointly" filer status.
-              document.getElementById("filingStatus").selectedIndex = 1;
-              
-              //This code resets the dropdown box to the "Married Seperately" filer status.
-              document.getElementById("filingStatus").selectedIndex = 2;
-              
-              //This code resets the dropdown box to the "Head of Household" filer status.
-              document.getElementById("filingStatus").selectedIndex = 3;
 
+              document.getElementById("taxEstimate").innerHTML = "";
+          
+              document.getElementById("taxBracket").innerHTML = "";
+              
+              
       }//end of clearButton function
       
    </script>
